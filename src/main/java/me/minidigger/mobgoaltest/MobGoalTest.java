@@ -20,8 +20,8 @@ public final class MobGoalTest extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(command.getName().equalsIgnoreCase("mobgoaltest")) {
-            if(!(sender instanceof Player)) {
+        if (command.getName().equalsIgnoreCase("mobgoaltest")) {
+            if (!(sender instanceof Player)) {
                 return true;
             }
             Player player = (Player) sender;
@@ -37,7 +37,7 @@ public final class MobGoalTest extends JavaPlugin {
             player.sendMessage("Target goals2: " + targetGoals2);
 
             Villager villager = (Villager) player.getWorld().spawnEntity(player.getLocation(), EntityType.VILLAGER);
-            villager.getGoals().addGoal(GoalType.TARGET, 1, new Goal(){
+            villager.getGoals().addGoal(GoalType.TARGET, 1, new Goal() {
 
                 @Override
                 public boolean shouldActivate() {
