@@ -1,0 +1,7 @@
+name: MobGoalTest
+version: ${project.version}
+main: me.minidigger.mobgoaltest.MobGoalTest
+api-version: 1.15
+author: MiniDigger
+commands:
+  mobgoaltest:
