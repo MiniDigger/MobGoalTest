@@ -1,9 +1,11 @@
 package me.minidigger.mobgoaltest;
 
 import com.destroystokyo.paper.ai.Goal;
+import com.destroystokyo.paper.ai.GoalSubType;
 import com.destroystokyo.paper.ai.GoalType;
 import com.destroystokyo.paper.ai.VanillaGoal;
 
+import java.util.EnumSet;
 import java.util.stream.Collectors;
 
 import org.bukkit.EntityEffect;
@@ -52,6 +54,11 @@ public final class MobGoalTest extends JavaPlugin {
                 @Override
                 public NamespacedKey getKey() {
                     return new NamespacedKey(MobGoalTest.this, "villager_test");
+                }
+
+                @Override
+                public EnumSet<GoalSubType> getSubTypes() {
+                    return EnumSet.of(GoalSubType.LOOK);
                 }
             });
             return true;
